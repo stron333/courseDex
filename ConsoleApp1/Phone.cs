@@ -21,29 +21,37 @@ namespace ConsoleApp1
 
     public class PhoneWithCamera : Phone
     {
-        public void GetPhoto()
+        public Photo Photo { get; set; }
+        public void MakePhoto()
         {
-            var capture = GetCapture();
-            SavePhoto(capture);
+            Photo photo = GetPhoto();
+            SavePhoto(photo);
         }
-        private Photo GetCapture()
+        private Photo GetPhoto()
         {
             return new Photo();
         }
-        private void SavePhoto(object capture){ }
+        private void SavePhoto(Photo photo)
+        {
+            Photo = photo;
+        }
+
     }
 
     public class SmartPhone : PhoneWithCamera
     {
-
+        public void RenamePhoto(string newName)
+        {
+            Photo.Name = newName;
+        }
     }
 
     public class Photo
     {
         public string Name { get; set; }
-        public int Size
+        public double Size
         {
-            get { return Height * Weight; }
+            get { return (Height * Weight)/1024; }
         }
 
         public int Height { get; set; }
@@ -51,6 +59,8 @@ namespace ConsoleApp1
         public Photo()
         {
             Name = "Photo("+DateTime.Now.ToString()+")";
+            Height = 1080;
+            Weight = 1920;
         }
 
     }

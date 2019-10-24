@@ -10,12 +10,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            PhoneWithCamera myPhone = new PhoneWithCamera();
+            SmartPhone myPhone = new SmartPhone();
+            myPhone.Model = "Samsung";
+            myPhone.Price = "1000";
             myPhone.Call("456484564");
-            myPhone.GetPhoto();
-            Photo ph = new Photo();
-            ph.Name = "gdfgd";
-            ph. = 54;
+            myPhone.MakePhoto();
+            Console.WriteLine("Телефон: {0}. Цена: {1}", myPhone.Model, myPhone.Price);
+            myPhone.MakePhoto();
+            Console.WriteLine("Фото: {0} сохраненно. Размер: {1}", myPhone.Photo.Name, myPhone.Photo.Size);
+            myPhone.RenamePhoto("Пейзаж");
+            Console.WriteLine("Новое имя фото: {0}. Размер: {1}", myPhone.Photo.Name, myPhone.Photo.Size);
+            Console.Read();
         }
     }
 }
