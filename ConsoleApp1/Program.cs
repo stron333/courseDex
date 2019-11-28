@@ -8,9 +8,13 @@ namespace ConsoleApp1
 {
     class Program
     {
+        struct Days 
+        {
+            ValueType valueType;  
+        }
         static void Main(string[] args)
         {
-            SmartPhone myPhone = new SmartPhone();
+            /*SmartPhone myPhone = new SmartPhone();
             myPhone.Model = "Samsung";
             myPhone.Price = "1000";
             myPhone.Call("456484564");
@@ -20,6 +24,11 @@ namespace ConsoleApp1
             Console.WriteLine("Фото: {0} сохраненно. Размер: {1}", myPhone.Photo.Name, myPhone.Photo.Size);
             myPhone.RenamePhoto("Пейзаж");
             Console.WriteLine("Новое имя фото: {0}. Размер: {1}", myPhone.Photo.Name, myPhone.Photo.Size);
+            Console.Read();*/
+
+            int x = 4;
+            int y = 3;
+            Console.WriteLine(x^y);
             Console.Read();
         }
     }
