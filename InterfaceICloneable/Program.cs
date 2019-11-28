@@ -24,7 +24,7 @@ namespace InterfaceICloneable
         }
     }
 
-    struct MyStruct: objtICloneable
+    struct MyStruct: ICloneable
     {
         public ValueType value1;
         public ValueType value2;
