@@ -11,8 +11,15 @@ namespace TestIEnumerable
         
         static void Main(string[] args)
         {
-            PassengerCar passengerCar = PassengerCars.Audi();
-            PassengerCar passengerCar1 = PassengerCars.BMW();
+            CarPark carPark = new CarPark();
+            carPark.AddMachine (Trucks.VOLVO());
+            carPark.AddMachine(PassengerCars.BMW());
+
+            foreach (Machine machine in carPark)
+            {
+                Console.WriteLine(machine.Mark);
+            }
+
         }
     }
 }

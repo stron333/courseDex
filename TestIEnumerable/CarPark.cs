@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,37 @@ using System.Threading.Tasks;
 
 namespace TestIEnumerable
 {
-    class CarPark
+    
+    class CarPark : IEnumerable, IEnumerator
     {
+        private Machine[] machines = new Machine[0];
+        int index = -1;
         
+        public void AddMachine(Machine machine)
+        {
+            Array.Resize(ref machines, machines.Length + 1);
+            machines[machines.Length - 1] = machine;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return (IEnumerator)GetEnumerator();
+        }               
+        public bool MoveNext()
+        {
+            if (index < machines.Length - 1)
+            {
+                index++;
+                return true;
+            }
+            else
+                return false;
+        }
+        public void Reset()
+        {
+            index = -1;
+        }
+        public object Current { get { return machines[index]; } }
     }
 
     class Machine
@@ -54,6 +83,40 @@ namespace TestIEnumerable
         public static PassengerCar BMW()
         {
             return new PassengerCar("", 5, 654, 700, 500, 5000, "BMW");
+        }
+        public static PassengerCar Mersedes()
+        {
+            return new PassengerCar("", 5, 700, 800, 500, 4500, "Mersedes");
+        }
+    }
+
+    class Truck : Machine
+    {
+        public string WayBill { get; set; }
+        public Truck(string wayBill,
+                            int numberOfSeats,
+                            int weight,
+                            int height,
+                            int width,
+                            int carrying,
+                            string mark) : base(numberOfSeats, weight, height, width, carrying, mark)
+        {
+            WayBill = wayBill;
+        }
+    }
+    static class Trucks
+    {
+        public static Truck KAMAZ()
+        {
+            return new Truck("", 3, 123, 123, 324, 4000, "КАМАЗ");
+        }
+        public static Truck MAN()
+        {
+            return new Truck("", 3, 654, 700, 500, 5000, "MAN");
+        }
+        public static Truck VOLVO()
+        {
+            return new Truck("", 3, 700, 800, 500, 4500, "VOLVO");
         }
     }
 }
