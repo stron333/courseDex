@@ -8,36 +8,25 @@ using System.Threading.Tasks;
 namespace TestIEnumerable
 {
     
-    class CarPark : IEnumerable, IEnumerator
+    class CarPark : IEnumerable<Machine>
     {
         private Machine[] machines = new Machine[0];
-        int index = -1;
-        
+
         public void AddMachine(Machine machine)
         {
             Array.Resize(ref machines, machines.Length + 1);
             machines[machines.Length - 1] = machine;
         }
 
-        public IEnumerator GetEnumerator()
+        public IEnumerator<Machine> GetEnumerator()
         {
-            return (IEnumerator)GetEnumerator();
-        }               
-        public bool MoveNext()
-        {
-            if (index < machines.Length - 1)
-            {
-                index++;
-                return true;
-            }
-            else
-                return false;
+            return ((IEnumerable<Machine>)machines).GetEnumerator();
         }
-        public void Reset()
+
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            index = -1;
+            return ((IEnumerable<Machine>)machines).GetEnumerator();
         }
-        public object Current { get { return machines[index]; } }
     }
 
     class Machine

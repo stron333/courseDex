@@ -12,14 +12,20 @@ namespace TestIEnumerable
         static void Main(string[] args)
         {
             CarPark carPark = new CarPark();
-            carPark.AddMachine (Trucks.VOLVO());
-            carPark.AddMachine(PassengerCars.BMW());
+            carPark.AddMachine(Trucks.VOLVO());
+            carPark.AddMachine(PassengerCars.BMW());                      
 
             foreach (Machine machine in carPark)
             {
                 Console.WriteLine(machine.Mark);
             }
 
+            var enumerator = carPark.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                Console.WriteLine(enumerator.Current.Mark + " " + enumerator.Current.Carrying);
+            }
+            Console.ReadLine();
         }
     }
 }
