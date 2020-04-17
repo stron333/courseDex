@@ -32,11 +32,9 @@ namespace InterfaceICloneable
         public object Clone()
         {
             return this.MemberwiseClone();
-        }
-
-     
-    
+        }  
     }
+
     public class ValueClass
     {
         public ValueType valueInClass { get; set; }
