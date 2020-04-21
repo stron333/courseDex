@@ -7,17 +7,32 @@ namespace TestIQueryable
     {
         static void Main(string[] args)
         {
-            string[] teams = { "Бавария", "Боруссия", "Реал Мадрид", "Манчестер Сити", "ПСЖ", "Барселона" };
-            var selectedTeamsArray = teams.Where(t => t.ToUpper().StartsWith("Б")).OrderBy(t =>
-            t).ToArray(); // выражение будет вычислено прямо здесь и один раз
-            foreach (string s in selectedTeamsArray)
+            AutoPark autoPark = new AutoPark();
+            for (int i = 0; i < 100; i++)
             {
-                Console.WriteLine(s);
+                autoPark.AddRandom();
             }
-            foreach (string s in selectedTeamsArray)
+            var selectedTeamsArray = autoPark.Automobiles.Where(t => t.GodVipuska >= 2000)
+                                                         .OrderBy(t => t.GodVipuska)
+                                                         .ToList();
+
+            Console.WriteLine("Марка           Год    Тех. осмотр");
+            foreach (AutoPark.Automobile s in selectedTeamsArray)
             {
-                Console.WriteLine(s);
+                Console.WriteLine("{0}      {1}     {2}", MarkaProbeli(s.Marka), 
+                                                          s.GodVipuska, 
+                                                          s.TehOsmotr);
             }
+            Console.ReadLine();
+        }
+
+        public static string MarkaProbeli (string marka)
+        {
+            while (marka.Length != 10)
+            {
+                marka += " ";
+            }
+            return marka;
         }
     }
 }

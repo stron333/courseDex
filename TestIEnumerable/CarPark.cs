@@ -25,7 +25,7 @@ namespace TestIEnumerable
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return ((IEnumerable<Machine>)machines).GetEnumerator();
+            return GetEnumerator();
         }
     }
 
