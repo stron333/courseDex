@@ -13,7 +13,7 @@ namespace TestIQueryable
                 autoPark.AddRandom();
             }
             var selectedTeamsArray = autoPark.Automobiles.Where(t => t.GodVipuska >= 2000)
-                                                         .OrderBy(t => t.GodVipuska)
+                                                         .OrderByDescending(t => t.GodVipuska)
                                                          .ToList();
 
             Console.WriteLine("Марка           Год    Тех. осмотр");
