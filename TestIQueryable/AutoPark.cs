@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace TestIQueryable
     {
         public List<Automobile> Automobiles { get; }
         private string[] marki = {"Audi", "Mercedes", "BMW", "Wolksvagen", "Toyota" };
+        private int[] qwe = { 1,2,3,4,5 };
 
         public AutoPark ()
         {
@@ -29,6 +31,7 @@ namespace TestIQueryable
             bool tehOsmotr = rnd.Next(100) < 50 ? true : false;
             Add(marka, godVipuska, tehOsmotr);
         }
+                
         public class Automobile
         {
             public string Marka { get; set; }
