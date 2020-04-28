@@ -5,7 +5,8 @@ using System.Text;
 
 namespace TestIComparable
 {
-    class SomeFigure: IComparable<int>
+    
+    class SomeFigure: IComparable<SomeFigure>
     {
         private int a;
         private int b;
@@ -36,7 +37,6 @@ namespace TestIComparable
                 CountArea();
             }
         }        
-
         public int Area
         {
             get
@@ -44,21 +44,20 @@ namespace TestIComparable
                 return area;
             }                        
         }
-
         public SomeFigure (int _a, int _b)
         {
             a = _a;
             b = _b;
             CountArea();
         }
-
         private void CountArea()
         {
             area = a * b;
         }
-        public int CompareTo([AllowNull] int other)
+
+        public int CompareTo(SomeFigure other)
         {
-            return Area.CompareTo(other);
+            return this.area.CompareTo(other.area);
         }
     }
 }

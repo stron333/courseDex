@@ -8,12 +8,12 @@ namespace TestIComparable
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            List<SomeFigure> someFigures = new List<SomeFigure>();
+            SomeFigure[] someFigures = new SomeFigure[10];
             for (int i = 0; i<10; i++)
             {
-                someFigures.Add(new SomeFigure(rnd.Next(1, 10), rnd.Next(1, 10)));
+                someFigures[i] = new SomeFigure(rnd.Next(1, 10), rnd.Next(1, 10));
             }
-
+            Array.Sort(someFigures);
             foreach (var someFigure in someFigures)
             {
                 Console.WriteLine("a = {0} b = {1} area = {2}",someFigure.A, someFigure.B, someFigure.Area);
