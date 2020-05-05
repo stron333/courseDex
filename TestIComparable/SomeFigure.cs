@@ -44,10 +44,14 @@ namespace TestIComparable
                 return area;
             }                        
         }
-        public SomeFigure (int _a, int _b)
+        public SomeFigure()
         {
-            a = _a;
-            b = _b;
+            
+        }
+        public SomeFigure (int a, int b)
+        {
+            this.a = a;
+            this.b = b;
             CountArea();
         }
         private void CountArea()
@@ -60,4 +64,14 @@ namespace TestIComparable
             return this.area.CompareTo(other.area);
         }
     }
+
+    class CompareSomeFigureToA : IComparer<SomeFigure>
+    {
+        public int Compare([AllowNull] SomeFigure x, [AllowNull] SomeFigure y)
+        {
+            return x.A.CompareTo(y.A);
+        }
+    }
+
+
 }
