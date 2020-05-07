@@ -13,7 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestIEnumerable", "TestIEnu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestIQueryable", "TestIQueryable\TestIQueryable.csproj", "{505BC0FF-AB66-4550-9B06-7646A33DC9B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestIComparable", "TestIComparable\TestIComparable.csproj", "{EF9C23C3-1170-496C-B034-0C0392FF5D58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestIComparable", "TestIComparable\TestIComparable.csproj", "{EF9C23C3-1170-496C-B034-0C0392FF5D58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGetHashCodeAndEquals", "TestGetHashCodeAndEquals\TestGetHashCodeAndEquals.csproj", "{40A84863-BB0C-4288-9E5A-63E9F2B747A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{EF9C23C3-1170-496C-B034-0C0392FF5D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF9C23C3-1170-496C-B034-0C0392FF5D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF9C23C3-1170-496C-B034-0C0392FF5D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40A84863-BB0C-4288-9E5A-63E9F2B747A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A84863-BB0C-4288-9E5A-63E9F2B747A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A84863-BB0C-4288-9E5A-63E9F2B747A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40A84863-BB0C-4288-9E5A-63E9F2B747A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

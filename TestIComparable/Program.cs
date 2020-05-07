@@ -9,6 +9,7 @@ namespace TestIComparable
         {
             Random rnd = new Random();
             SomeFigure[] someFigures = new SomeFigure[10];
+
             for (int i = 0; i<10; i++)
             {
                 someFigures[i] = new SomeFigure(rnd.Next(1, 10), rnd.Next(1, 10));
