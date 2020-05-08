@@ -26,6 +26,8 @@ namespace TestGetHashCodeAndEquals
 
             Console.WriteLine(person1.GetHashCode());
             Console.WriteLine(person2.GetHashCode());
+            Console.WriteLine(person3.GetHashCode());
+
 
 
             Console.ReadLine();
