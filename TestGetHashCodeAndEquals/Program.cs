@@ -24,11 +24,21 @@ namespace TestGetHashCodeAndEquals
                 "Бендеры",
                 333333);
 
+            Person person4 = person1;
+
             Console.WriteLine(person1.GetHashCode());
             Console.WriteLine(person2.GetHashCode());
             Console.WriteLine(person3.GetHashCode());
-
-
+            Console.WriteLine();
+            Console.WriteLine(person1.Equals(person2));
+            Console.WriteLine(person1.Equals(person3));
+            Console.WriteLine(person1.Equals(person4));
+            Console.WriteLine(person1.Equals(person1));
+            Console.WriteLine();
+            Console.WriteLine(person1 == person2);
+            Console.WriteLine(person1 == person3);
+            Console.WriteLine(person1 == person4);
+            Console.WriteLine(person1 == person1);
 
             Console.ReadLine();
         }
