@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestIQueryable", "TestIQuer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestIComparable", "TestIComparable\TestIComparable.csproj", "{EF9C23C3-1170-496C-B034-0C0392FF5D58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGetHashCodeAndEquals", "TestGetHashCodeAndEquals\TestGetHashCodeAndEquals.csproj", "{40A84863-BB0C-4288-9E5A-63E9F2B747A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGetHashCodeAndEquals", "TestGetHashCodeAndEquals\TestGetHashCodeAndEquals.csproj", "{40A84863-BB0C-4288-9E5A-63E9F2B747A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestList", "TestList\TestList.csproj", "{86410CA1-B70D-4BFB-AE04-5FA9392FAE28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{40A84863-BB0C-4288-9E5A-63E9F2B747A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40A84863-BB0C-4288-9E5A-63E9F2B747A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40A84863-BB0C-4288-9E5A-63E9F2B747A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86410CA1-B70D-4BFB-AE04-5FA9392FAE28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86410CA1-B70D-4BFB-AE04-5FA9392FAE28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86410CA1-B70D-4BFB-AE04-5FA9392FAE28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86410CA1-B70D-4BFB-AE04-5FA9392FAE28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
