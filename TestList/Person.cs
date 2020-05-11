@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.VisualBasic;
 
 namespace TestList
 {
@@ -17,6 +18,11 @@ namespace TestList
             this.DataRogdenia = DataRogdenia;
             this.MestoRogdenia = MestoRogdenia;
             this.NomPasporta = NomPasporta;
-        }        
+        }
+
+        public override string ToString()
+        {
+            return FIO +" "+ DataRogdenia.ToString("D") + " "+ NomPasporta;
+        }
     }
 }
