@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestIComparable", "TestICom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGetHashCodeAndEquals", "TestGetHashCodeAndEquals\TestGetHashCodeAndEquals.csproj", "{40A84863-BB0C-4288-9E5A-63E9F2B747A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestList", "TestList\TestList.csproj", "{86410CA1-B70D-4BFB-AE04-5FA9392FAE28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestDictionary", "TestList\TestDictionary.csproj", "{86410CA1-B70D-4BFB-AE04-5FA9392FAE28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

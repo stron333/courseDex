@@ -8,10 +8,6 @@ namespace ConsoleApp1
 {
     class Program
     {
-        struct Days 
-        {
-            ValueType valueType;  
-        }
         static void Main(string[] args)
         {
             SmartPhone myPhone = new SmartPhone();

@@ -20,9 +20,6 @@ namespace TypeCastingAndConversion
 
             Console.WriteLine((string)person);
 
-            Person.Equals(name);
-            if (person == name2)
-
         }
         public static void WriteConsole(string firstName, string lastName)
         {
