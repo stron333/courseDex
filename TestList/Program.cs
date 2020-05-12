@@ -41,8 +41,18 @@ namespace TestList
 
             foreach (var pair in spravMestoRaboti)
                 Console.WriteLine("{0} - {1}", pair.Key.ToString(), pair.Value);
-
             Console.WriteLine();
+
+            string mestoraboti;
+            spravMestoRaboti.TryGetValue(EntireRequest(), out mestoraboti);
+            if (mestoraboti != null)
+                Console.WriteLine(mestoraboti);
+            else
+                Console.WriteLine("Такого человека нет в базе");
+        }
+
+        public static Person EntireRequest()
+        {
             Console.WriteLine("Введите ФИО");
             string fio = Console.ReadLine();
 
@@ -60,12 +70,7 @@ namespace TestList
             Console.WriteLine("Введите номер паспорта");
             string nomPasporta = Console.ReadLine();
 
-            Person search = new Person(fio, dataRogdenia, mestoRogdenia, nomPasporta);
-
-            bool df = search.Equals(person4);
-            search = person4;
-            Console.WriteLine(spravMestoRaboti[search]);
-
+            return new Person(fio, dataRogdenia, mestoRogdenia, nomPasporta);
         }
     }
 }

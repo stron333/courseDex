@@ -28,6 +28,10 @@ namespace TestList
                    person.DataRogdenia == this.DataRogdenia &&
                    person.NomPasporta == this.NomPasporta;
         }
+        public override int GetHashCode()
+        {
+            return (FIO + DataRogdenia + MestoRogdenia + NomPasporta).GetHashCode();
+        }
         public override string ToString()
         {
             return FIO +" "+ DataRogdenia.ToString("D") + " "+ NomPasporta;
