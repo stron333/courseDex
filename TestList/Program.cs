@@ -11,29 +11,61 @@ namespace TestList
                 "Иванов Иван Иванович",
                 new DateTime(1990, 6, 15),
                 "Тирасполь",
-                111111);
+                "111111");
 
             Person person2 = new Person(
                 "Иванов Иван Иванович",
                 new DateTime(1990, 6, 15),
                 "Тирасполь",
-                222222);
+                "222222");
 
             Person person3 = new Person(
                 "Сидоров Сидр Сидорович",
                 new DateTime(1985, 11, 1),
                 "Бендеры",
-                333333);
+                "333333");
             
-            Dictionary<string,Person> spravMestoRaboti = new Dictionary<string, Person>
+            Person person4 = new Person(
+                "1",
+                new DateTime(2001, 1, 1),
+                "1",
+                "1");
+
+            Dictionary<Person, string> spravMestoRaboti = new Dictionary<Person, string>
             {
-                {"Шериф", person1},
-                {"Квинт", person2},
-                {"Тираэт", person3}
+                {person1,"Шериф"},
+                {person2,"Квинт"},
+                {person3,"Тираэт"},
+                {person4,"Тиратекс"}
             };
 
             foreach (var pair in spravMestoRaboti)
-                Console.WriteLine("{0} - {1}", pair.Key, pair.Value.ToString());
+                Console.WriteLine("{0} - {1}", pair.Key.ToString(), pair.Value);
+
+            Console.WriteLine();
+            Console.WriteLine("Введите ФИО");
+            string fio = Console.ReadLine();
+
+            Console.WriteLine("Введите дату рождения");
+            DateTime dataRogdenia = new DateTime();
+            while (dataRogdenia == DateTime.MinValue)
+            {
+                if (!DateTime.TryParse(Console.ReadLine(), out dataRogdenia))
+                {
+                    Console.WriteLine("Некорректная дата рождения. Повторите ввод");
+                }
+            }
+            Console.WriteLine("Введите место рождения");
+            string mestoRogdenia = Console.ReadLine();
+            Console.WriteLine("Введите номер паспорта");
+            string nomPasporta = Console.ReadLine();
+
+            Person search = new Person(fio, dataRogdenia, mestoRogdenia, nomPasporta);
+
+            bool df = search.Equals(person4);
+            search = person4;
+            Console.WriteLine(spravMestoRaboti[search]);
+
         }
     }
 }
