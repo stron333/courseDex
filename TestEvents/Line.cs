@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TestEvents
 {
-    class Line
+    class Line : IDisposable
     {
         private List<int> line;
         public int Threshold { get; set; }
@@ -22,10 +22,10 @@ namespace TestEvents
         public void AddNewLineMember(int newListMember)
         {
             line.Add(newListMember);
-            if (line.Count > 3)
+            if (line.Count > Threshold)
                 if (SpecialEvent != null)
                     SpecialEvent(this,
-                    new SpecialEventArgs("В очереди более 3х участников", line.Count));
+                    new SpecialEventArgs("В очереди более "+ Threshold + " участников", line.Count));
         }
 
         public void RemoveLineMember()
